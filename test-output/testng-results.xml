@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-15T13:23:34 IST" name="Default suite" finished-at="2025-06-15T13:23:34 IST" duration-ms="58">
+  <suite started-at="2025-06-15T14:20:45 IST" name="Default suite" finished-at="2025-06-15T14:20:45 IST" duration-ms="60">
     <groups>
     </groups>
-    <test started-at="2025-06-15T13:23:34 IST" name="Default test" finished-at="2025-06-15T13:23:34 IST" duration-ms="58">
+    <test started-at="2025-06-15T14:20:45 IST" name="Default test" finished-at="2025-06-15T14:20:45 IST" duration-ms="60">
       <class name="com.test.CalcTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalcTest@ae13544]" started-at="2025-06-15T13:23:34 IST" name="setUp" finished-at="2025-06-15T13:23:34 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.test.CalcTest@1040be71]" started-at="2025-06-15T14:20:45 IST" name="setUp" finished-at="2025-06-15T14:20:45 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="CanAddNumbers()[pri:0, instance:com.test.CalcTest@ae13544]" started-at="2025-06-15T13:23:34 IST" name="CanAddNumbers" finished-at="2025-06-15T13:23:34 IST" duration-ms="13" status="PASS">
+        <test-method signature="CanAddNumbers()[pri:0, instance:com.test.CalcTest@1040be71]" started-at="2025-06-15T14:20:45 IST" name="CanAddNumbers" finished-at="2025-06-15T14:20:45 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CanAddNumbers -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.CalcTest@ae13544]" started-at="2025-06-15T13:23:34 IST" name="tearDown" finished-at="2025-06-15T13:23:34 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.test.CalcTest@1040be71]" started-at="2025-06-15T14:20:45 IST" name="tearDown" finished-at="2025-06-15T14:20:45 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
