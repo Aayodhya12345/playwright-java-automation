@@ -65,5 +65,12 @@
 <artifactId>playwright</artifactId>
 <version>1.51.0</version>
 </dependency>
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.4.0</version>  <!-- Use the latest stable version -->
+    <scope>compile</scope>  <!-- Change from 'test' to 'compile' -->
+</dependency>
+
 </dependencies>
 </project>
