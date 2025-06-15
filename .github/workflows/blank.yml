@@ -18,16 +18,9 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
     - name: Build with Maven
       run: mvn clean compile test --file pom.xml
-    - name: Get Xray Authentication Token
-      id: get-token
-      run: |
-        RESPONSE=$(curl -X POST "https://xray.cloud.xpand-it.com/api/v2/authenticate" \
-                   -H "Content-Type: application/json" \
-                   -d '{"client_id": "C0B240DC5ADB4894B6E3FBD7FFAC46EA", "client_secret": "9808e7853c30c60a3de21828a1802434420826d66d952bedd0ec54680cd99366"}')
+      
+    - name: Compile Java Utility
+      run: javac XrayUploaderUtils.java
 
-        TOKEN=$(echo $RESPONSE | sed 's/"//g')
-        echo "XRAY_TOKEN=$TOKEN" >> $GITHUB_ENV
-
-    - name: Upload Result to Xray
-      run: |
-        curl -H "Content-Type: application/json" \ -H "Authentication: Bearer $XRAY_TOKEN" \ -X POST https://xray.cloud.getxray.app/api/v2/import/execution \ --data @"results.json"
+    - name: Run Java Utility
+      run: java XrayUploaderUtils
