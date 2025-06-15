@@ -1,7 +1,8 @@
 package com.test;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import junit.framework.Assert;
 
@@ -10,12 +11,12 @@ import static org.junit.Assert.assertThat;
  
 public class CalcTest {
  
-    @Before
+    @BeforeClass
     public void setUp() throws Exception {
  
     }
  
-    @After
+    @AfterClass
     public void tearDown() throws Exception {
  
     }
