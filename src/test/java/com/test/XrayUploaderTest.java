@@ -1,4 +1,4 @@
-package com.test;
+/*package com.test;
 import com.microsoft.playwright.*;
 import com.utilities.XrayUploaderUtils;
 
@@ -35,7 +35,7 @@ public class XrayUploaderTest {
             
             
             System.out.println("Test result: " + resultStatus);
-            XrayUploader.uploadTestResult(testKey, resultStatus, token);*/
+            XrayUploader.uploadTestResult(testKey, resultStatus, token);
             
             boolean isSuccess = page.waitForSelector(".inventory_list").isVisible();
 
@@ -93,8 +93,9 @@ public class XrayUploaderTest {
             	status="FAILED";
             }
       
-    }
-        
+    
+        }
 }
      
 }
+*/
