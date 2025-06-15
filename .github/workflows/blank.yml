@@ -21,8 +21,10 @@ jobs:
     - name: Submit results to Xray
       uses: mikepenz/xray-action@v2.4.5
       with:
-        username: ${{ secrets.CLIENT_ID }}
-        password: ${{secrets.CLIENT_SECRET}}
+        xrayBaseURL: ${{ env.XRAYBASEURL }}
+        tokenUrl: ${{ env.TOKENURL }}
+        username: ${{ env.CLIENT_ID }}
+        password: ${{env.CLIENT_SECRET}}
         testFormat: "junit"
         testPaths: "**/surefire-reports/*.xml"
         testExeckey: "PROJ02-6"
