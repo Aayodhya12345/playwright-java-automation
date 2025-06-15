@@ -18,12 +18,14 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
     - name: Build with Maven
       run: mvn clean compile test --file pom.xml
-    - name: Submit results to Xray
-      uses: mikepenz/xray-action@v2.4.5
-      with:
-        xrayBaseURL: ${{ env.XRAYBASEURL }}
-        username: ${{ env.CLIENT_ID }}
-        password: ${{env.CLIENT_SECRET}}
-        testFormat: "junit"
-        testPaths: "**/surefire-reports/*.xml"
-        testExeckey: "PROJ02-6"
+    - name: Get Xray Authentication Token
+      id: get-token
+      run: |
+        RESPONSE=$(curl -s -X POST https://xray.cloud.getxray.app/api/v2/authenticate \ -H "Content-Type: application/json" \ -d "{\"client_id\": \"${{ secrets.CLIENT_ID }}\", \"client_secret\": \"${{ secrets.CLIENT_SECRET }}\"}")
+
+        TOKEN=$(echo $RESPONSE | sed 's/"//g')
+        echo "XRAY_TOKEN=$TOKEN" >> $GITHUB_ENV
+
+    - name: Upload Result to Xray
+      run: |
+        curl -H "Content-Type: application/json" \ -H "Authentication: Bearer $XRAY_TOKEN" \ -X POST https://xray.cloud.getxray.app/api/v2/import/execution \ --data @"results.json"
