@@ -23,7 +23,7 @@ jobs:
       with:
         username: ${{ secrets.CLIENT_ID }}
         password: ${{ secrets.CLIENT_SECRET }}
-        token: ${{ secrets.XRAY_PERSONAL_ACCESS_TOKEN }}
+        xrayToken: ${{ secrets.XRAY_PERSONAL_ACCESS_TOKEN }}
         testFormat: "junit"
         testPaths: "**/surefire-reports/*.xml"
         projectKey: "PROJ02-6"
