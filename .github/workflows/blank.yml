@@ -22,7 +22,6 @@ jobs:
       uses: mikepenz/xray-action@v2.4.5
       with:
         xrayBaseURL: ${{ env.XRAYBASEURL }}
-        tokenUrl: ${{ env.TOKENURL }}
         username: ${{ env.CLIENT_ID }}
         password: ${{env.CLIENT_SECRET}}
         testFormat: "junit"
